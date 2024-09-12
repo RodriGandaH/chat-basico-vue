@@ -1,91 +1,107 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
 .login-card {
     width: 500px;
     border-radius: 35px;
     margin-left: 33%;
     margin-top: 25%;
     padding: 30px;
-    box-shadow: 0 0 20px 0 #ddd6fe !important;
-    border: 1px solid #c4b5fd !important;
+    box-shadow: 0 0 20px 0 #4a4a4a !important;
+    border: 1px solid #3a3a3a !important;
+    background-color: #2a2a2a;
 }
 
 .login-card h5 {
     text-align: center !important;
-    color: #7c3aed !important;
+    color: white !important;
     margin-bottom: 2rem;
 }
 
 .login-card button {
     text-align: center !important;
-    background-color: #7c3aed !important;
-    border: 1px solid #6d28d9 !important;
+    background-color: #3a3a3a !important;
+    border: 1px solid #4a4a4a !important;
+    color: white;
+}
+.login-card button:hover {
+    background-color: #2a2a2a !important;
 }
 
 .border-right {
-    border: 1px solid #c4b5fd !important;
-    box-shadow: 0 0 20px 0 #ddd6fe !important;
+    border: 1px solid #3a3a3a !important;
+    box-shadow: 0 0 20px 0 #4a4a4a !important;
     border-top-left-radius: 35px;
     border-bottom-left-radius: 35px;
     padding: 0 !important;
+    background-color: #2a2a2a;
 }
 
 .users {
     height: 600px;
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: #c4b5fd #d9d3f3;
+    scrollbar-color: #1a1a1a #3a3a3a;
     padding: 15px;
 }
 
 .list-group li {
     cursor: pointer;
-    border: 0px solid #ddd6fe !important;
-    border-bottom: 1px solid #ddd6fe !important;
+    border: 0px solid #3a3a3a !important;
+    border-bottom: 1px solid #3a3a3a !important;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
 }
 
 .card-chats {
     height: 700px;
-    border: 1px solid #c4b5fd !important;
-    box-shadow: 0 0 20px 0 #ddd6fe !important;
+    border: 1px solid #3a3a3a !important;
+    box-shadow: 0 0 20px 0 #4a4a4a !important;
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
+    background-color: #2a2a2a;
 }
 
 .titulo-chat {
-    color: #7c3aed !important;
+    color: white !important;
     display: flex;
     gap: 15px;
 }
 
 .titulo-chat span small {
-    color: #a491f9 !important;
+    color: white !important;
     font-size: 1rem;
 }
 
 .titulo-chat img {
     border-radius: 50% !important;
-    border: 1px solid #7c3aed !important;
+    border: 1px solid #2a2a2a !important;
     width: 50px;
     height: 50px;
 }
 
 .btn-enviar {
     text-align: center !important;
-    background-color: #7c3aed !important;
-    border: 1px solid #6d28d9 !important;
+    background-color: #3a3a3a !important;
+    border: 1px solid #4a4a4a !important;
+    color: white;
 }
 
 .btn-enviar:hover {
-    background-color: #9176fb !important;
+    background-color: #2a2a2a !important;
 }
 
 #chats {
     overflow-y: scroll;
     height: 480px !important;
     scrollbar-width: thin;
-    scrollbar-color: #c4b5fd #d9d3f3;
-    border: 1px solid #c4b5fd !important;
+    scrollbar-color: #1a1a1a #3a3a3a;
+    border: 1px solid #3a3a3a !important;
     padding-left: 4rem !important;
     padding-right: 4rem !important;
+    background-color: #222222;
 }
 
 .flex {
@@ -98,7 +114,7 @@
 }
 
 .chat {
-    border: 1px solid #c4b5fd !important;
+    border: 1px solid #3a3a3a !important;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
@@ -106,26 +122,39 @@
 }
 
 .chat-emisor {
-    background-color: #d6ccfd !important;
+    background-color: #3a3a3a !important;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    color: #e0e0e0;
 }
 
 .chat-receptor {
-    background-color: #e0e7ff !important;
-    /* float: right; */
+    background-color: #4a4a4a !important;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
+    color: #e0e0e0;
 }
 
 .img-chat {
     border-radius: 50% !important;
-    border: 1px solid #7c3aed !important;
+    border: 1px solid #2a2a2a !important;
     width: 40px;
     height: 40px;
 }
 
 .online {
     padding: 15px !important;
-    border-bottom: 1px solid #c4b5fd !important;
+    border-bottom: 1px solid #3a3a3a !important;
+}
+
+input,
+textarea {
+    background-color: #333333 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #4a4a4a !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9a9a9a !important;
 }
