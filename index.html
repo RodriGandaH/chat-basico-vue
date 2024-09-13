@@ -14,8 +14,6 @@
 </head>
 
 <body>
-
-
   <div id="app" class="container my-5">
     <div v-if="user.username == null" class="card login-card">
       <div class="card-body">
@@ -26,7 +24,11 @@
         <button @click="login()" class="btn btn-primary btn-sm m-2">Ingresar</button>
       </div>
     </div>
-
+    <div v-if="user.username != null" class="d-flex justify-content-end mb-3">
+      <button @click="cerrarSesion()" class="btn btn-danger btn-sm">
+        Cerrar sesión
+      </button>
+    </div>
     <div v-if="user.username != null" class="row">
       <div class="col-md-4 border-right">
         <h5 class=" titulo-chat online">
@@ -87,7 +89,6 @@
                 </div>
               </div>
             </div>
-
             <textarea v-model="mensaje" class="form-control mt-3" placeholder="Mensaje..."></textarea>
             <div class="text-center mt-3 row justify-content-end">
               <button @click="enviar()" class="btn btn-primary btn-sm btn-enviar col-2 mx-2">Enviar</button>
@@ -108,8 +109,6 @@
       </div>
     </div>
   </div>
-
-
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
@@ -262,6 +261,16 @@
           // cargarMensajes();
         }
 
+        const cerrarSesion = async () => {
+          const { error } = await supabase.auth.signOut();
+          if (error) {
+            console.log(error);
+          } else {
+            user.value = {};
+            localStorage.removeItem('user');
+          }
+        }
+
         return {
           mostrar,
           username,
@@ -276,6 +285,7 @@
           mensaje,
           mensajes,
           enviar,
+          cerrarSesion,
         }
       }
     }).mount('#app')
