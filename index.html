@@ -89,8 +89,8 @@
             </div>
 
             <textarea v-model="mensaje" class="form-control mt-3" placeholder="Mensaje..."></textarea>
-            <div class="text-center mt-3">
-              <button @click="enviar()" class="btn btn-primary btn-sm btn-enviar">Enviar</button>
+            <div class="text-center mt-3 row justify-content-end">
+              <button @click="enviar()" class="btn btn-primary btn-sm btn-enviar col-2 mx-2">Enviar</button>
               <audio id="audio" controls style="display: none;">
                 <source type="audio/wav" src="tono.mp3">
               </audio>

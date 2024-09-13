@@ -123,15 +123,13 @@ body {
 
 .chat-emisor {
     background-color: #3a3a3a !important;
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-radius: 25px;
     color: #e0e0e0;
 }
 
 .chat-receptor {
-    background-color: #4a4a4a !important;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+    background-color: #5a5a5a !important;
+    border-radius: 25px;
     color: #e0e0e0;
 }
 
